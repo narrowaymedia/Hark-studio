@@ -1,0 +1,67 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "src": {
+      "default": "footage[0]",
+      "title": "Src",
+      "type": "string"
+    },
+    "in_": {
+      "title": "In",
+      "type": "number"
+    },
+    "out": {
+      "title": "Out",
+      "type": "number"
+    },
+    "answer_at": {
+      "title": "Answer At",
+      "type": "number"
+    },
+    "clue": {
+      "title": "Clue",
+      "type": "string"
+    },
+    "answer": {
+      "title": "Answer",
+      "type": "string"
+    },
+    "clue_sticker": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Clue Sticker"
+    },
+    "winner": {
+      "default": "none",
+      "title": "Winner",
+      "type": "string"
+    },
+    "timer": {
+      "default": true,
+      "title": "Timer",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "in_",
+    "out",
+    "answer_at",
+    "clue",
+    "answer"
+  ],
+  "title": "Props",
+  "type": "object"
+}

@@ -1,0 +1,17 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "mood": {
+      "default": "upbeat",
+      "title": "Mood",
+      "type": "string"
+    },
+    "bpm": {
+      "default": 112,
+      "title": "Bpm",
+      "type": "number"
+    }
+  },
+  "title": "Props",
+  "type": "object"
+}

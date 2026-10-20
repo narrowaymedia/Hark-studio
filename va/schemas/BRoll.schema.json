@@ -1,0 +1,62 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "query": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Query"
+    },
+    "file": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "File"
+    },
+    "at": {
+      "default": 0.0,
+      "title": "At",
+      "type": "number"
+    },
+    "dur": {
+      "default": 1.2,
+      "title": "Dur",
+      "type": "number"
+    },
+    "mode": {
+      "default": "cutaway",
+      "title": "Mode",
+      "type": "string"
+    },
+    "source": {
+      "default": [
+        "pexels",
+        "pixabay"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "title": "Source",
+      "type": "array"
+    },
+    "src_in": {
+      "default": 0.0,
+      "title": "Src In",
+      "type": "number"
+    }
+  },
+  "title": "Props",
+  "type": "object"
+}

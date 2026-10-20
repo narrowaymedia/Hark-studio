@@ -1,0 +1,22 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "transcript": {
+      "default": "analysis/transcript.json",
+      "title": "Transcript",
+      "type": "string"
+    },
+    "words_per_line": {
+      "default": 3,
+      "title": "Words Per Line",
+      "type": "integer"
+    },
+    "position": {
+      "default": "center_low",
+      "title": "Position",
+      "type": "string"
+    }
+  },
+  "title": "Props",
+  "type": "object"
+}

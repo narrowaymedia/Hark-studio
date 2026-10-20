@@ -1,0 +1,44 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "at": {
+      "title": "At",
+      "type": "number"
+    },
+    "dur": {
+      "default": 3.0,
+      "title": "Dur",
+      "type": "number"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "subtitle": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Subtitle"
+    },
+    "fields": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "default": {},
+      "title": "Fields",
+      "type": "object"
+    }
+  },
+  "required": [
+    "at",
+    "title"
+  ],
+  "title": "Props",
+  "type": "object"
+}

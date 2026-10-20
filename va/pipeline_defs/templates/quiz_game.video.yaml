@@ -1,0 +1,40 @@
+# Fill the rounds from analysis/moments.json and the transcript. Derived values
+# (scores, start times, sync points) are computed by `va build`, never typed here.
+video:
+  name: {{name}}
+  pipeline: quiz_game
+  profile: instagram_reels
+  style: bold_pop
+  language: en
+  runtime: ffmpeg          # locked at proposal; no silent swaps
+  target_seconds: [30, 60]
+
+inputs:
+  footage: [inputs/game.mov]
+  reference: null
+  idea: ""
+
+teams:
+  A: {name: TEAM A, side: left,  color: "#E63946"}
+  B: {name: TEAM B, side: right, color: "#2D8CFF"}
+
+timeline:
+  - Hook: {text: "Can you guess it in 3 seconds?", seconds: 2.5, teaser: auto}
+  - Round: {id: r1, src: "footage[0]", in: 0.0, out: 8.0, answer_at: 5.0, clue: "...", answer: "...", winner: A}
+  - CTA: {bonus_clue: "One more clue...", countdown: 3, text: "Comment your answer!"}
+
+overlays:
+  - Scoreboard: {teams: [A, B], position: top, pop_on_change: true}
+  - ProgressBar: {position: bottom}
+
+audio:
+  voice:  {chain: [highpass_90, denoise, compress_4to1]}
+  music:  {mood: upbeat, bpm: 112, gain: -20dB}
+  sfx:    {density: medium}
+  master: {lufs: -14, true_peak: -1.5}
+
+deliver:
+  thumbnail: {headline: "WHO WINS?", label: "PART 1"}
+  srt: true
+  formats: [9x16]
+  split: {max_seconds: 60}

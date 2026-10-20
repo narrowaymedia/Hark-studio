@@ -1,0 +1,22 @@
+# Events, documentary.
+fonts:
+  display: Playfair Display
+  fun: Playfair Display
+  body: Source Sans 3
+  fallback: [Noto Serif, Noto Sans Tamil, Noto Sans Devanagari]
+colors:
+  ink: "#1C1917"
+  paper: "#FAF7F2"
+  accent: "#E9A23B"
+  team_a: "#B45309"
+  team_b: "#0F766E"
+  good: "#4D7C0F"
+  bad: "#B91C1C"
+motion:
+  enter: sine_in_out
+  exit: sine_in_out
+  punch_zoom: 0.05
+captions: {style: caption, case: sentence, stroke: 2, position: bottom}
+sfx: {density: low, kit: organic}
+music: {mood: warm, bpm: [70, 95]}
+grade: {lut: null, saturation: 0.95, contrast: 1.03}

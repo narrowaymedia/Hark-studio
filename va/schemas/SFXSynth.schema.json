@@ -1,0 +1,30 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "kinds": {
+      "default": [
+        "pop",
+        "ding",
+        "correct",
+        "wrong",
+        "whoosh_short",
+        "whoosh_long",
+        "swoosh_text",
+        "tick",
+        "coin",
+        "impact",
+        "shutter",
+        "riser",
+        "drumroll",
+        "notification"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "title": "Kinds",
+      "type": "array"
+    }
+  },
+  "title": "Props",
+  "type": "object"
+}

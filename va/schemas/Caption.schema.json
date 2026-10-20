@@ -1,0 +1,53 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "text": {
+      "title": "Text",
+      "type": "string"
+    },
+    "at": {
+      "default": 0.0,
+      "title": "At",
+      "type": "number"
+    },
+    "dur": {
+      "default": 2.0,
+      "title": "Dur",
+      "type": "number"
+    },
+    "label": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Label"
+    },
+    "position": {
+      "default": "center_low",
+      "title": "Position",
+      "type": "string"
+    },
+    "sfx": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "pop",
+      "title": "Sfx"
+    }
+  },
+  "required": [
+    "text"
+  ],
+  "title": "Props",
+  "type": "object"
+}

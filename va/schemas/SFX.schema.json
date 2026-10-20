@@ -1,0 +1,24 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "sound": {
+      "title": "Sound",
+      "type": "string"
+    },
+    "at": {
+      "default": 0.0,
+      "title": "At",
+      "type": "number"
+    },
+    "gain_db": {
+      "default": 0.0,
+      "title": "Gain Db",
+      "type": "number"
+    }
+  },
+  "required": [
+    "sound"
+  ],
+  "title": "Props",
+  "type": "object"
+}

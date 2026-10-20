@@ -1,0 +1,36 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Id"
+    },
+    "src": {
+      "default": "footage[0]",
+      "title": "Src",
+      "type": "string"
+    },
+    "in_": {
+      "default": 0.0,
+      "title": "In",
+      "type": "number"
+    },
+    "out": {
+      "title": "Out",
+      "type": "number"
+    }
+  },
+  "required": [
+    "out"
+  ],
+  "title": "Props",
+  "type": "object"
+}

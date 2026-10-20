@@ -1,0 +1,22 @@
+# Games, fun shorts. Components read these tokens, never raw values.
+fonts:
+  display: Anton
+  fun: Bangers
+  body: Montserrat
+  fallback: [Noto Sans, Noto Sans Tamil, Noto Sans Devanagari]
+colors:
+  ink: "#111111"
+  paper: "#FFFFFF"
+  accent: "#FFD400"
+  team_a: "#E63946"
+  team_b: "#2D8CFF"
+  good: "#2BD46B"
+  bad: "#FF3B3B"
+motion:
+  enter: back_out
+  exit: expo_in
+  punch_zoom: 0.16
+captions: {style: word_pop, case: upper, stroke: 6, position: center_low}
+sfx: {density: medium, kit: playful}
+music: {mood: upbeat, bpm: [105, 125]}
+grade: {lut: null, saturation: 1.12, contrast: 1.05}

@@ -1,0 +1,17 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "bpm": {
+      "default": 112,
+      "title": "Bpm",
+      "type": "number"
+    },
+    "fps": {
+      "default": 30,
+      "title": "Fps",
+      "type": "integer"
+    }
+  },
+  "title": "Props",
+  "type": "object"
+}

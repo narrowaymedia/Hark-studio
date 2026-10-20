@@ -1,0 +1,26 @@
+video:
+  name: {{name}}
+  pipeline: listicle
+  profile: instagram_reels
+  style: clean_pro
+  runtime: ffmpeg
+  target_seconds: [20, 45]
+inputs:
+  footage: [inputs/clip.mp4]
+  idea: ""
+timeline:
+  - Hook: {text: "3 things nobody tells you", seconds: 2.0, teaser: false}
+  - Segment: {id: s1, src: "footage[0]", in: 0.0, out: 6.0}
+  - Segment: {id: s2, src: "footage[0]", in: 6.0, out: 12.0}
+  - Segment: {id: s3, src: "footage[0]", in: 12.0, out: 18.0}
+  - CTA: {countdown: 0, text: "Follow for part 2"}
+  - InfoCard: {at: s1.start, dur: 3, title: "1. First thing", subtitle: "why it matters"}
+  - InfoCard: {at: s2.start, dur: 3, title: "2. Second thing"}
+  - InfoCard: {at: s3.start, dur: 3, title: "3. Third thing"}
+overlays:
+  - WordPop: {}
+  - ProgressBar: {}
+audio:
+  music: {mood: calm, bpm: 92}
+deliver:
+  thumbnail: {headline: "3 THINGS"}

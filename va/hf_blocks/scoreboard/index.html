@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- HyperFrames block: two-team scoreboard. Score events are injected from video.yaml at build time.
+     Render: npx hyperframes render va/hf_blocks/scoreboard --format mov-alpha -o build/hf/scoreboard.mov -->
+<html>
+<head>
+<style>
+  html, body { margin: 0; background: transparent; }
+  #stage { position: relative; width: 1080px; height: 1920px; font-family: Anton, Impact, sans-serif; }
+  #board { position: absolute; top: 240px; left: 40px; right: 160px; display: flex; justify-content: space-between; }
+  .team { display: flex; align-items: center; gap: 24px; padding: 18px 28px; border-radius: 14px; color: #fff; font-size: 44px; }
+  .team b { font-size: 84px; display: inline-block; }
+  #ta { background: var(--team-a, #E63946); } #tb { background: var(--team-b, #2D8CFF); }
+</style>
+</head>
+<body>
+<div id="stage" data-composition-id="scoreboard" data-width="1080" data-height="1920">
+  <div id="board" class="clip" data-start="0" data-duration="60" data-track-index="1">
+    <div class="team" id="ta">TEAM A <b id="a">0</b></div>
+    <div class="team" id="tb">TEAM B <b id="b">0</b></div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script>
+  // Replaced at build time with build/plan.json score_events.
+  const EVENTS = window.__SCORE_EVENTS || [{at: 0, score: {A: 0, B: 0}}];
+  const tl = gsap.timeline({ paused: true });
+  EVENTS.forEach((e, i) => {
+    if (i === 0) return;
+    for (const [k, el] of [["A", "#a"], ["B", "#b"]]) {
+      if (e.score[k] !== EVENTS[i - 1].score[k]) {
+        tl.call(() => { document.querySelector(el).textContent = e.score[k]; }, null, e.at);
+        tl.fromTo(el, { scale: 0.4 }, { scale: 1, duration: 0.3, ease: "back.out(2.7)" }, e.at);
+      }
+    }
+  });
+  window.__timelines = { scoreboard: tl };
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "image": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Image"
+    },
+    "search": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Search"
+    },
+    "style": {
+      "default": "sticker",
+      "title": "Style",
+      "type": "string"
+    },
+    "at": {
+      "default": 0.0,
+      "title": "At",
+      "type": "number"
+    },
+    "dur": {
+      "default": 2.5,
+      "title": "Dur",
+      "type": "number"
+    },
+    "x": {
+      "default": 540,
+      "title": "X",
+      "type": "integer"
+    },
+    "y": {
+      "default": 620,
+      "title": "Y",
+      "type": "integer"
+    },
+    "size": {
+      "default": 360,
+      "title": "Size",
+      "type": "integer"
+    },
+    "enter": {
+      "default": "back_out",
+      "title": "Enter",
+      "type": "string"
+    },
+    "wobble": {
+      "default": true,
+      "title": "Wobble",
+      "type": "boolean"
+    },
+    "sfx": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "pop",
+      "title": "Sfx"
+    }
+  },
+  "title": "Props",
+  "type": "object"
+}

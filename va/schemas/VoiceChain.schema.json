@@ -1,0 +1,19 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "chain": {
+      "default": [
+        "highpass_90",
+        "denoise",
+        "compress_4to1"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "title": "Chain",
+      "type": "array"
+    }
+  },
+  "title": "Props",
+  "type": "object"
+}

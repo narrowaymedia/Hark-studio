@@ -1,0 +1,60 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Id"
+    },
+    "text": {
+      "title": "Text",
+      "type": "string"
+    },
+    "seconds": {
+      "default": 2.5,
+      "title": "Seconds",
+      "type": "number"
+    },
+    "teaser": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        }
+      ],
+      "default": "auto",
+      "title": "Teaser"
+    },
+    "src": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Src"
+    },
+    "flash": {
+      "default": 0.25,
+      "title": "Flash",
+      "type": "number"
+    }
+  },
+  "required": [
+    "text"
+  ],
+  "title": "Props",
+  "type": "object"
+}

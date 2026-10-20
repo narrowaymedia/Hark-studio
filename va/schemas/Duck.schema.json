@@ -1,0 +1,27 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "threshold": {
+      "default": 0.03,
+      "title": "Threshold",
+      "type": "number"
+    },
+    "ratio": {
+      "default": 8,
+      "title": "Ratio",
+      "type": "number"
+    },
+    "attack_ms": {
+      "default": 20,
+      "title": "Attack Ms",
+      "type": "number"
+    },
+    "release_ms": {
+      "default": 300,
+      "title": "Release Ms",
+      "type": "number"
+    }
+  },
+  "title": "Props",
+  "type": "object"
+}

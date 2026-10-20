@@ -1,0 +1,29 @@
+name: quiz_game
+description: Footage of a game with rounds and teams, cut into a scored short.
+structure: Hook -> Round x N -> CTA
+stages:
+  - id: analyze
+    tools: [Probe, Transcribe, SceneDetect, Faces, RoundDetect, Moments, RefStyle]
+    skill: skills/quiz_game/analyze.md
+  - id: proposal
+    skill: skills/quiz_game/proposal.md
+    gate: user_approval
+  - id: plan
+    output: video.yaml
+    skill: skills/quiz_game/plan.md
+    checks: [duration_target, hook_first_2s, cta_last]
+  - id: assets
+    tools: [ImageSearch, ImageGen, CutoutSticker, BRollSearch, BRollFit, SFXBank, MusicPick]
+    gate: storyboard_optional
+  - id: build
+    runtime: ffmpeg+hyperframes
+  - id: qa
+    tools: [qa.*]
+  - id: deliver
+    tools: [Thumbnail, PostCaption, FirstComment, SplitParts]
+    gate: user_approval_to_publish
+defaults:
+  profile: instagram_reels
+  style: bold_pop
+  target_seconds: [30, 60]
+  split: {max_seconds: 60}

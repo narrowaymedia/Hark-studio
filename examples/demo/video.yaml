@@ -1,0 +1,44 @@
+# Zero-key demo: test footage, synthesised SFX and music. `make demo` renders it.
+video:
+  name: demo-quiz
+  pipeline: quiz_game
+  profile: instagram_reels
+  style: bold_pop
+  language: en
+  runtime: ffmpeg
+  target_seconds: [30, 60]
+
+inputs:
+  footage: [inputs/game.mp4, inputs/broll.mp4]
+  idea: "Two-team clue game, scoreboard, b-roll on a clue, comment CTA"
+
+teams:
+  A: {name: TEAM A, side: left,  color: "#E63946"}
+  B: {name: TEAM B, side: right, color: "#2D8CFF"}
+
+timeline:
+  - Hook: {text: "Can you guess it in 3 seconds?", seconds: 2.5, teaser: auto}
+  - Round: {id: r1, src: "footage[0]", in: 3.0, out: 11.0, answer_at: 8.0,
+            clue: "A talking animal", answer: "Donkey", winner: B}
+  - BRoll: {file: inputs/broll.mp4, at: r1.clue, dur: 1.5, mode: overlay}
+  - Round: {id: r2, src: "footage[0]", in: 15.0, out: 23.0, answer_at: 20.0,
+            clue: "Lives in a swamp", answer: "Shrek", winner: A}
+  - Round: {id: r3, src: "footage[0]", in: 28.0, out: 36.0, answer_at: 33.0,
+            clue: "Far far away", answer: "The kingdom", winner: AB}
+  - CTA: {bonus_clue: "One more clue...", countdown: 3, text: "Comment your answer!"}
+
+overlays:
+  - Scoreboard: {teams: [A, B], position: top, pop_on_change: true}
+  - ProgressBar: {position: bottom}
+
+audio:
+  voice:  {chain: [highpass_90, compress_4to1]}
+  music:  {mood: upbeat, bpm: 112, gain: -20dB}
+  sfx:    {density: medium}
+  master: {lufs: -14, true_peak: -1.5}
+
+deliver:
+  thumbnail: {headline: "WHO WINS?", label: "PART 1"}
+  srt: true
+  formats: [9x16]
+  split: {max_seconds: 60}

@@ -1,0 +1,235 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "music/calm_92",
+      "path": "assets/music/calm_92.wav",
+      "tags": [
+        "calm",
+        "music",
+        "loop",
+        "synth"
+      ],
+      "bpm": 92,
+      "duration": 32.0,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "music/upbeat_112",
+      "path": "assets/music/upbeat_112.wav",
+      "tags": [
+        "upbeat",
+        "music",
+        "loop",
+        "synth"
+      ],
+      "bpm": 112,
+      "duration": 32.0,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "music/warm_84",
+      "path": "assets/music/warm_84.wav",
+      "tags": [
+        "warm",
+        "music",
+        "loop",
+        "synth"
+      ],
+      "bpm": 84,
+      "duration": 32.0,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "sfx/coin",
+      "path": "assets/sfx/coin.wav",
+      "tags": [
+        "coin",
+        "synth"
+      ],
+      "duration": 0.37,
+      "sync_point": 0.001,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "sfx/correct",
+      "path": "assets/sfx/correct.wav",
+      "tags": [
+        "correct",
+        "synth"
+      ],
+      "duration": 0.47,
+      "sync_point": 0.002,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "sfx/ding",
+      "path": "assets/sfx/ding.wav",
+      "tags": [
+        "ding",
+        "synth"
+      ],
+      "duration": 0.9,
+      "sync_point": 0.002,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "sfx/drumroll",
+      "path": "assets/sfx/drumroll.wav",
+      "tags": [
+        "drumroll",
+        "synth"
+      ],
+      "duration": 1.2,
+      "sync_point": 1.2,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "sfx/impact",
+      "path": "assets/sfx/impact.wav",
+      "tags": [
+        "impact",
+        "synth"
+      ],
+      "duration": 0.5,
+      "sync_point": 0.001,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "sfx/notification",
+      "path": "assets/sfx/notification.wav",
+      "tags": [
+        "notification",
+        "synth"
+      ],
+      "duration": 0.35,
+      "sync_point": 0.002,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "sfx/pop",
+      "path": "assets/sfx/pop.wav",
+      "tags": [
+        "pop",
+        "synth"
+      ],
+      "duration": 0.09,
+      "sync_point": 0.004,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "sfx/riser",
+      "path": "assets/sfx/riser.wav",
+      "tags": [
+        "riser",
+        "synth"
+      ],
+      "duration": 1.5,
+      "sync_point": 1.5,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "sfx/shutter",
+      "path": "assets/sfx/shutter.wav",
+      "tags": [
+        "shutter",
+        "synth"
+      ],
+      "duration": 0.08,
+      "sync_point": 0.0005,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "sfx/swoosh_text",
+      "path": "assets/sfx/swoosh_text.wav",
+      "tags": [
+        "swoosh",
+        "text",
+        "synth"
+      ],
+      "duration": 0.25,
+      "sync_point": 0.1125,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "sfx/tick",
+      "path": "assets/sfx/tick.wav",
+      "tags": [
+        "tick",
+        "synth"
+      ],
+      "duration": 0.03,
+      "sync_point": 0.0005,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "sfx/whoosh_long",
+      "path": "assets/sfx/whoosh_long.wav",
+      "tags": [
+        "whoosh",
+        "long",
+        "synth"
+      ],
+      "duration": 0.9,
+      "sync_point": 0.405,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "sfx/whoosh_short",
+      "path": "assets/sfx/whoosh_short.wav",
+      "tags": [
+        "whoosh",
+        "short",
+        "synth"
+      ],
+      "duration": 0.42,
+      "sync_point": 0.189,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    },
+    {
+      "id": "sfx/wrong",
+      "path": "assets/sfx/wrong.wav",
+      "tags": [
+        "wrong",
+        "synth"
+      ],
+      "duration": 0.5,
+      "sync_point": 0.005,
+      "source": "synth",
+      "license": "own",
+      "attribution": null
+    }
+  ]
+}

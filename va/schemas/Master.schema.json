@@ -1,0 +1,22 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "lufs": {
+      "default": -14,
+      "title": "Lufs",
+      "type": "number"
+    },
+    "true_peak": {
+      "default": -1.5,
+      "title": "True Peak",
+      "type": "number"
+    },
+    "lra": {
+      "default": 11,
+      "title": "Lra",
+      "type": "number"
+    }
+  },
+  "title": "Props",
+  "type": "object"
+}

@@ -1,0 +1,12 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "tonemap": {
+      "default": "hable",
+      "title": "Tonemap",
+      "type": "string"
+    }
+  },
+  "title": "Props",
+  "type": "object"
+}

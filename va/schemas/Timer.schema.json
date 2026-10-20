@@ -1,0 +1,34 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "at": {
+      "title": "At",
+      "type": "number"
+    },
+    "dur": {
+      "default": 5.0,
+      "title": "Dur",
+      "type": "number"
+    },
+    "position": {
+      "default": "upper",
+      "title": "Position",
+      "type": "string"
+    },
+    "color": {
+      "default": "accent",
+      "title": "Color",
+      "type": "string"
+    },
+    "ticks": {
+      "default": true,
+      "title": "Ticks",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "at"
+  ],
+  "title": "Props",
+  "type": "object"
+}

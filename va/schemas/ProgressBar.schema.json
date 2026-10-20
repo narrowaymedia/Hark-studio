@@ -1,0 +1,22 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "position": {
+      "default": "bottom",
+      "title": "Position",
+      "type": "string"
+    },
+    "height": {
+      "default": 10,
+      "title": "Height",
+      "type": "integer"
+    },
+    "color": {
+      "default": "accent",
+      "title": "Color",
+      "type": "string"
+    }
+  },
+  "title": "Props",
+  "type": "object"
+}

@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VideoAgent video.yaml",
+  "type": "object",
+  "required": [
+    "video",
+    "timeline"
+  ],
+  "properties": {
+    "video": {
+      "type": "object",
+      "required": [
+        "name",
+        "pipeline",
+        "profile"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "pipeline": {
+          "type": "string"
+        },
+        "profile": {
+          "enum": [
+            "instagram_reels",
+            "tiktok",
+            "youtube_shorts",
+            "youtube",
+            "square",
+            "linkedin"
+          ]
+        },
+        "style": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "runtime": {
+          "type": "string"
+        },
+        "target_seconds": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      }
+    },
+    "inputs": {
+      "type": "object"
+    },
+    "teams": {
+      "type": "object"
+    },
+    "timeline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "minProperties": 1,
+        "maxProperties": 1,
+        "properties": {
+          "BRoll": {
+            "$ref": "BRoll.schema.json"
+          },
+          "BeatGrid": {
+            "$ref": "BeatGrid.schema.json"
+          },
+          "CTA": {
+            "$ref": "CTA.schema.json"
+          },
+          "Caption": {
+            "$ref": "Caption.schema.json"
+          },
+          "Duck": {
+            "$ref": "Duck.schema.json"
+          },
+          "Hook": {
+            "$ref": "Hook.schema.json"
+          },
+          "InfoCard": {
+            "$ref": "InfoCard.schema.json"
+          },
+          "KineticTitle": {
+            "$ref": "KineticTitle.schema.json"
+          },
+          "Master": {
+            "$ref": "Master.schema.json"
+          },
+          "MusicPick": {
+            "$ref": "MusicPick.schema.json"
+          },
+          "MusicSynth": {
+            "$ref": "MusicSynth.schema.json"
+          },
+          "ProgressBar": {
+            "$ref": "ProgressBar.schema.json"
+          },
+          "PunchZoom": {
+            "$ref": "PunchZoom.schema.json"
+          },
+          "Round": {
+            "$ref": "Round.schema.json"
+          },
+          "SFX": {
+            "$ref": "SFX.schema.json"
+          },
+          "SFXSynth": {
+            "$ref": "SFXSynth.schema.json"
+          },
+          "Scoreboard": {
+            "$ref": "Scoreboard.schema.json"
+          },
+          "Segment": {
+            "$ref": "Segment.schema.json"
+          },
+          "Sticker": {
+            "$ref": "Sticker.schema.json"
+          },
+          "Tag": {
+            "$ref": "Tag.schema.json"
+          },
+          "Timer": {
+            "$ref": "Timer.schema.json"
+          },
+          "TonemapHLG": {
+            "$ref": "TonemapHLG.schema.json"
+          },
+          "VoiceChain": {
+            "$ref": "VoiceChain.schema.json"
+          },
+          "WordPop": {
+            "$ref": "WordPop.schema.json"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "overlays": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "minProperties": 1,
+        "maxProperties": 1,
+        "properties": {
+          "BRoll": {
+            "$ref": "BRoll.schema.json"
+          },
+          "BeatGrid": {
+            "$ref": "BeatGrid.schema.json"
+          },
+          "CTA": {
+            "$ref": "CTA.schema.json"
+          },
+          "Caption": {
+            "$ref": "Caption.schema.json"
+          },
+          "Duck": {
+            "$ref": "Duck.schema.json"
+          },
+          "Hook": {
+            "$ref": "Hook.schema.json"
+          },
+          "InfoCard": {
+            "$ref": "InfoCard.schema.json"
+          },
+          "KineticTitle": {
+            "$ref": "KineticTitle.schema.json"
+          },
+          "Master": {
+            "$ref": "Master.schema.json"
+          },
+          "MusicPick": {
+            "$ref": "MusicPick.schema.json"
+          },
+          "MusicSynth": {
+            "$ref": "MusicSynth.schema.json"
+          },
+          "ProgressBar": {
+            "$ref": "ProgressBar.schema.json"
+          },
+          "PunchZoom": {
+            "$ref": "PunchZoom.schema.json"
+          },
+          "Round": {
+            "$ref": "Round.schema.json"
+          },
+          "SFX": {
+            "$ref": "SFX.schema.json"
+          },
+          "SFXSynth": {
+            "$ref": "SFXSynth.schema.json"
+          },
+          "Scoreboard": {
+            "$ref": "Scoreboard.schema.json"
+          },
+          "Segment": {
+            "$ref": "Segment.schema.json"
+          },
+          "Sticker": {
+            "$ref": "Sticker.schema.json"
+          },
+          "Tag": {
+            "$ref": "Tag.schema.json"
+          },
+          "Timer": {
+            "$ref": "Timer.schema.json"
+          },
+          "TonemapHLG": {
+            "$ref": "TonemapHLG.schema.json"
+          },
+          "VoiceChain": {
+            "$ref": "VoiceChain.schema.json"
+          },
+          "WordPop": {
+            "$ref": "WordPop.schema.json"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "audio": {
+      "type": "object"
+    },
+    "deliver": {
+      "type": "object"
+    }
+  }
+}

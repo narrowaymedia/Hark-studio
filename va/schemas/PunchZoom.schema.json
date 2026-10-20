@@ -1,0 +1,43 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "at": {
+      "title": "At",
+      "type": "number"
+    },
+    "dur": {
+      "default": 0.45,
+      "title": "Dur",
+      "type": "number"
+    },
+    "amount": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Amount"
+    },
+    "sfx": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "impact",
+      "title": "Sfx"
+    }
+  },
+  "required": [
+    "at"
+  ],
+  "title": "Props",
+  "type": "object"
+}

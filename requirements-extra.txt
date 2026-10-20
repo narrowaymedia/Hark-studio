@@ -1,0 +1,12 @@
+# Optional analysis / enhancement extras (heavier installs)
+faster-whisper
+whisperx
+scenedetect[opencv]
+mediapipe
+librosa
+soundfile
+pyloudnorm
+pedalboard
+rembg
+auto-editor
+yt-dlp

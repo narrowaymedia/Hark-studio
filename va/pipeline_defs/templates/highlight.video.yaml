@@ -1,0 +1,23 @@
+video:
+  name: {{name}}
+  pipeline: highlight
+  profile: instagram_reels
+  style: bold_pop
+  runtime: ffmpeg
+  target_seconds: [15, 45]
+inputs:
+  footage: [inputs/event.mp4]
+  idea: ""
+timeline:
+  - Hook: {text: "Best moments", seconds: 1.6, teaser: false}
+  # One Segment per ranked moment; keep lengths on the beat grid (BeatGrid b(bar, beat)).
+  - Segment: {id: m1, src: "footage[0]", in: 0.0, out: 2.14}
+  - Segment: {id: m2, src: "footage[0]", in: 10.0, out: 12.14}
+  - PunchZoom: {at: m2.start, dur: 0.4}
+  - CTA: {countdown: 0, text: "Full video on the channel"}
+overlays:
+  - ProgressBar: {}
+audio:
+  music: {mood: upbeat, bpm: 112, gain: -10dB}
+deliver:
+  thumbnail: {headline: "HIGHLIGHTS"}

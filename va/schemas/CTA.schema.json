@@ -1,0 +1,70 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Id"
+    },
+    "text": {
+      "default": "Comment your answer!",
+      "title": "Text",
+      "type": "string"
+    },
+    "bonus_clue": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Bonus Clue"
+    },
+    "countdown": {
+      "default": 3,
+      "title": "Countdown",
+      "type": "integer"
+    },
+    "src": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Src"
+    },
+    "at_source": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "At Source"
+    },
+    "hold": {
+      "default": 2.0,
+      "title": "Hold",
+      "type": "number"
+    }
+  },
+  "title": "Props",
+  "type": "object"
+}

@@ -1,0 +1,34 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "text": {
+      "title": "Text",
+      "type": "string"
+    },
+    "at": {
+      "default": 0.0,
+      "title": "At",
+      "type": "number"
+    },
+    "words_per_beat": {
+      "default": 2,
+      "title": "Words Per Beat",
+      "type": "integer"
+    },
+    "beat": {
+      "default": 0.45,
+      "title": "Beat",
+      "type": "number"
+    },
+    "position": {
+      "default": "center",
+      "title": "Position",
+      "type": "string"
+    }
+  },
+  "required": [
+    "text"
+  ],
+  "title": "Props",
+  "type": "object"
+}

@@ -1,0 +1,40 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "teams": {
+      "default": [
+        "A",
+        "B"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "title": "Teams",
+      "type": "array"
+    },
+    "position": {
+      "default": "top",
+      "title": "Position",
+      "type": "string"
+    },
+    "pop_on_change": {
+      "default": true,
+      "title": "Pop On Change",
+      "type": "boolean"
+    },
+    "sfx": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "coin",
+      "title": "Sfx"
+    }
+  },
+  "title": "Props",
+  "type": "object"
+}

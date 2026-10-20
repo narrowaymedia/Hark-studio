@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "videoagent"
+version = "0.1.0"
+description = "Agentic video editing components on top of FFmpeg, HyperFrames and Remotion"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "pyyaml>=6.0", "pydantic>=2.6"]
+
+[project.scripts]
+va = "va.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["va*"]
+
+[tool.setuptools.package-data]
+va = ["styles/*.yaml", "pipeline_defs/*.yaml", "pipeline_defs/templates/*.yaml", "schemas/*.json", "skills/**/*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

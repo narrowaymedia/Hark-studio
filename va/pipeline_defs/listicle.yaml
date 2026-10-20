@@ -1,0 +1,27 @@
+name: listicle
+description: Hook, then N info cards over footage or b-roll, then a CTA.
+structure: Hook -> InfoCard x N -> CTA
+stages:
+  - id: analyze
+    tools: [Probe, Transcribe, SceneDetect, Moments, RefStyle]
+    skill: skills/listicle/analyze.md
+  - id: proposal
+    skill: skills/listicle/proposal.md
+    gate: user_approval
+  - id: plan
+    output: video.yaml
+    skill: skills/listicle/plan.md
+    checks: [duration_target, hook_first_2s, cta_last]
+  - id: assets
+    tools: [BRollSearch, BRollFit, ImageSearch, SFXBank, MusicPick, TTS]
+  - id: build
+    runtime: ffmpeg
+  - id: qa
+    tools: [qa.*]
+  - id: deliver
+    tools: [Thumbnail, PostCaption, FirstComment]
+    gate: user_approval_to_publish
+defaults:
+  profile: instagram_reels
+  style: clean_pro
+  target_seconds: [20, 45]

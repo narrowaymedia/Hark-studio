@@ -1,0 +1,22 @@
+# Business, tutorials.
+fonts:
+  display: Inter
+  fun: Inter
+  body: Inter
+  fallback: [Noto Sans, Noto Sans Tamil, Noto Sans Devanagari]
+colors:
+  ink: "#0F172A"
+  paper: "#FFFFFF"
+  accent: "#3B82F6"
+  team_a: "#0EA5E9"
+  team_b: "#F97316"
+  good: "#16A34A"
+  bad: "#DC2626"
+motion:
+  enter: expo_out
+  exit: expo_in
+  punch_zoom: 0.08
+captions: {style: word_pop, case: sentence, stroke: 3, position: bottom}
+sfx: {density: low, kit: subtle}
+music: {mood: calm, bpm: [85, 100]}
+grade: {lut: null, saturation: 1.0, contrast: 1.02}

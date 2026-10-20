@@ -1,0 +1,44 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "text": {
+      "default": "CORRECT",
+      "title": "Text",
+      "type": "string"
+    },
+    "at": {
+      "default": 0.0,
+      "title": "At",
+      "type": "number"
+    },
+    "dur": {
+      "default": 1.4,
+      "title": "Dur",
+      "type": "number"
+    },
+    "color": {
+      "default": "accent",
+      "title": "Color",
+      "type": "string"
+    },
+    "position": {
+      "default": "upper",
+      "title": "Position",
+      "type": "string"
+    },
+    "sfx": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "correct",
+      "title": "Sfx"
+    }
+  },
+  "title": "Props",
+  "type": "object"
+}

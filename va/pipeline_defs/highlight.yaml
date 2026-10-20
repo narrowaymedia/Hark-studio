@@ -1,0 +1,27 @@
+name: highlight
+description: Ranked moments from long footage, cut to the beat.
+structure: Hook -> ranked Segments on the beat grid -> CTA
+stages:
+  - id: analyze
+    tools: [Probe, SceneDetect, Moments, RefStyle]
+    skill: skills/highlight/analyze.md
+  - id: proposal
+    skill: skills/highlight/proposal.md
+    gate: user_approval
+  - id: plan
+    output: video.yaml
+    skill: skills/highlight/plan.md
+    checks: [duration_target, cuts_on_beat]
+  - id: assets
+    tools: [MusicPick, SFXBank]
+  - id: build
+    runtime: ffmpeg
+  - id: qa
+    tools: [qa.*]
+  - id: deliver
+    tools: [Thumbnail, PostCaption, SplitParts]
+    gate: user_approval_to_publish
+defaults:
+  profile: instagram_reels
+  style: bold_pop
+  target_seconds: [15, 45]
